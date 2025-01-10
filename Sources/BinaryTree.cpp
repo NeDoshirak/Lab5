@@ -12,6 +12,7 @@ void BinaryTree::Add(BinaryTreeNode* &node, int data)
         node = new BinaryTreeNode(data);
         return;
     }
+
     if (data < node->Value)
     {
         Add(node->Left, data);
@@ -58,6 +59,7 @@ BinaryTreeNode* BinaryTree::RemoveNode(BinaryTreeNode* node, int value)
         node->Value = temp->Value;
         node->Right = RemoveNode(node->Right, temp->Value);
     }
+
     return node;
 }
 
@@ -124,15 +126,16 @@ BinaryTreeNode* BinaryTree::GetRoot()
 
 void BinaryTree::Clear(BinaryTreeNode* current)
 {
-    if (!current) return;
-
+    if (current == nullptr) return;
+ 
     Clear(current->Left);
     Clear(current->Right);
 
     delete current;
 }
 
-BinaryTree:: ~BinaryTree()
+
+BinaryTree::~BinaryTree() 
 {
     Clear(_root);
 }
