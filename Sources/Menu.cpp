@@ -1,4 +1,4 @@
-#include "Menu.h"
+#include "../Header/Menu.h"
 
 void PrintBinaryTree(BinaryTreeNode* root, int space = 0, int levelIndent = 5)
 {
@@ -46,7 +46,7 @@ int GetIntegerInput()
             if (value < 0)
             {
                 ClearInput();
-                std::cout << "Ââåäèòå íåîòðèöàòåëüíîå ÷èñëî. " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½ÐµÐ¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾. " << endl;
                 continue;
             }
 
@@ -66,10 +66,10 @@ void ShowMenu()
 
     do
     {
-        cout << "Âûáåðèòå ÑÄ äëÿ ðàáîòû\n";
-        cout << "1. Áèíàðíîå äåðåâî.\n";
-        cout << "2. Äåêàðòîâîå äåðåâî.\n";
-        cout << "0. Âûõîä.\n";
+        cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¡Ð” Ð´Ð»Ñ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹\n";
+        cout << "1. Ð‘Ð¸Ð½Ð°Ñ€Ð½Ð¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾.\n";
+        cout << "2. Ð”ÐµÐºÐ°Ñ€Ñ‚Ð¾Ð²Ð¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾.\n";
+        cout << "0. Ð’Ñ‹Ñ…Ð¾Ð´.\n";
 
         choice = GetIntegerInput();
 
@@ -91,7 +91,7 @@ void ShowMenu()
         }
         default:
         {
-            cout << "Ââåäèòå êîððåêòíûé ñèìâîë.\n";
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ ÑÐ¸Ð¼Ð²Ð¾Ð».\n";
         }
         }
     } while (choice != 0);
@@ -114,14 +114,14 @@ void ShowBinaryTreeMenu()
 
     do
     {
-        std::cout << "Ðàáîòà ñ áèíàðíûì äåðåâîì. Âàøå äåéñòâèå: " << endl;
-        std::cout << "1 - Äîáàâèòü ýëåìåíò.  " << endl;
-        std::cout << "2 - Óäàëèòü ýëåìåíò. " << endl;
-        std::cout << "3 - Íàéòè ýëåìåíò. " << endl;
-        std::cout << "4 - Âûâåñòè ìèíèìóì. " << endl;
-        std::cout << "5 - Âûâåñòè ìàêñèìóì. " << endl;
-        std::cout << "6 - Âûâåñòè äåðåâî. " << endl;
-        std::cout << "0 - Âûõîä. " << endl;
+        std::cout << "Ð Ð°Ð±Ð¾Ñ‚Ð° Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ñ‹Ð¼ Ð´ÐµÑ€ÐµÐ²Ð¾Ð¼. Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: " << endl;
+        std::cout << "1 - Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚.  " << endl;
+        std::cout << "2 - Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚. " << endl;
+        std::cout << "3 - ÐÐ°Ð¹Ñ‚Ð¸ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚. " << endl;
+        std::cout << "4 - Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼. " << endl;
+        std::cout << "5 - Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð¼Ð°ÐºÑÐ¸Ð¼ÑƒÐ¼. " << endl;
+        std::cout << "6 - Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð´ÐµÑ€ÐµÐ²Ð¾. " << endl;
+        std::cout << "0 - Ð’Ñ‹Ñ…Ð¾Ð´. " << endl;
 
         choice = GetIntegerInput();
 
@@ -129,29 +129,29 @@ void ShowBinaryTreeMenu()
         {
             case 1:
             {
-                std::cout << "Ââåäèòå ýëåìåíò äëÿ äîáàâëåíèÿ: " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: " << endl;
 
                 value = GetIntegerInput();
 
                 bt->Add(value);
 
-                std::cout << "Ýëåìåíò äîáàâëåí!" << endl;
+                std::cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½!" << endl;
                 break;
             }
             case 2:
             {
-                std::cout << "Ââåäèòå ýëåìåíò äëÿ óäàëåíèÿ: " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: " << endl;
 
                 value = GetIntegerInput();
 
                 bt->Remove(value);
 
-                std::cout << "Ýëåìåíò óäàë¸í." << endl;
+                std::cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»Ñ‘Ð½." << endl;
                 break;
             }
             case 3:
             {
-                std::cout << "Ââåäèòå ýëåìåíò äëÿ ïîèñêà: " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ°: " << endl;
 
                 value = GetIntegerInput();
 
@@ -159,11 +159,11 @@ void ShowBinaryTreeMenu()
 
                 if (btn != nullptr) 
                 {
-                    std::cout << "Ýëåìåíò íàéäåí!" << endl;
+                    std::cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ Ð½Ð°Ð¹Ð´ÐµÐ½!" << endl;
                 }
                 else
                 {
-                    std::cout << "Äàííîãî ýëåìåíòà íåò â äåðåâå. " << endl;
+                    std::cout << "Ð”Ð°Ð½Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½ÐµÑ‚ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ. " << endl;
                 }
 
                 break;
@@ -172,11 +172,11 @@ void ShowBinaryTreeMenu()
             {
                 try 
                 { 
-                    std::cout << "Ìèíèìàëüíûé ýëåìåíò: "<< bt->FindMin() << endl;
+                    std::cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: "<< bt->FindMin() << endl;
                 }
                 catch (runtime_error)
                 {
-                    std::cout << "Äåðåâî ïóñòî!" << endl;
+                    std::cout << "Ð”ÐµÑ€ÐµÐ²Ð¾ Ð¿ÑƒÑÑ‚Ð¾!" << endl;
                 }
                 break;
             }
@@ -184,17 +184,17 @@ void ShowBinaryTreeMenu()
             {
                 try
                 {
-                    std::cout << "Ìàêñèìàëüíûé ýëåìåíò: " << bt->FindMax() << endl;
+                    std::cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: " << bt->FindMax() << endl;
                 }
                 catch (runtime_error)
                 {
-                    std::cout << "Äåðåâî ïóñòî!" << endl;
+                    std::cout << "Ð”ÐµÑ€ÐµÐ²Ð¾ Ð¿ÑƒÑÑ‚Ð¾!" << endl;
                 }
             break;
             }
             case 6:
             {
-                std::cout << "Áèíàðîíîå äåðåâî: " << endl;
+                std::cout << "Ð‘Ð¸Ð½Ð°Ñ€Ð¾Ð½Ð¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾: " << endl;
                 PrintBinaryTree(bt->GetRoot());
                 break;
             }
@@ -204,7 +204,7 @@ void ShowBinaryTreeMenu()
             }
             default:
             {
-                std::cout << "Ââåäèòå êîððåêòíîå çíà÷åíèå! " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! " << endl;
                 break;
             }
         }
@@ -225,14 +225,14 @@ void ShowTreapMenu()
 
     do
     {
-        std::cout << "Ðàáîòà ñ äåêàðòîâûì äåðåâîì. Âàøå äåéñòâèå: " << endl;
-        std::cout << "1 - Äîáàâèòü ýëåìåíò (îïò).  " << endl;
-        std::cout << "2 - Äîáàâèòü ýëåìåíò (íå îïò.).  " << endl;
-        std::cout << "3 - Óäàëèòü ýëåìåíò (îïò). " << endl;
-        std::cout << "4 - Óäàëèòü ýëåìåíò ( íåîïò). " << endl;
-        std::cout << "5 - Íàéòè ýëåìåíò. " << endl;
-        std::cout << "6 - Âûâåñòè äåðåâî. " << endl;
-        std::cout << "0 - Âûõîä. " << endl;
+        std::cout << "Ð Ð°Ð±Ð¾Ñ‚Ð° Ñ Ð´ÐµÐºÐ°Ñ€Ñ‚Ð¾Ð²Ñ‹Ð¼ Ð´ÐµÑ€ÐµÐ²Ð¾Ð¼. Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: " << endl;
+        std::cout << "1 - Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ (Ð¾Ð¿Ñ‚).  " << endl;
+        std::cout << "2 - Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ (Ð½Ðµ Ð¾Ð¿Ñ‚.).  " << endl;
+        std::cout << "3 - Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ (Ð¾Ð¿Ñ‚). " << endl;
+        std::cout << "4 - Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ( Ð½ÐµÐ¾Ð¿Ñ‚). " << endl;
+        std::cout << "5 - ÐÐ°Ð¹Ñ‚Ð¸ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚. " << endl;
+        std::cout << "6 - Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð´ÐµÑ€ÐµÐ²Ð¾. " << endl;
+        std::cout << "0 - Ð’Ñ‹Ñ…Ð¾Ð´. " << endl;
 
         choice = GetIntegerInput();
 
@@ -240,51 +240,51 @@ void ShowTreapMenu()
         {
             case 1:
             {
-                std::cout << "Ââåäèòå ýëåìåíò äëÿ äîáàâëåíèÿ: " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: " << endl;
 
                 value = GetIntegerInput();
 
                 treap->AddOptimized(value);
 
-                std::cout << "Ýëåìåíò äîáàâëåí!" << endl;
+                std::cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½!" << endl;
                 break;
             }
             case 2:
             {
-                std::cout << "Ââåäèòå ýëåìåíò äëÿ äîáàâëåíèÿ: " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: " << endl;
 
                 value = GetIntegerInput();
 
                 treap->AddUnoptimized(value);
 
-                std::cout << "Ýëåìåíò äîáàâëåí!" << endl;
+                std::cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½!" << endl;
                 break;
             }
             case 3:
             {
-                std::cout << "Ââåäèòå ýëåìåíò äëÿ óäàëåíèÿ: " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: " << endl;
 
                 value = GetIntegerInput();
 
                 treap->RemoveOptimized(value);
 
-                std::cout << "Ýëåìåíò óäàë¸í!" << endl;
+                std::cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»Ñ‘Ð½!" << endl;
                 break;
             }
             case 4:
             {
-                std::cout << "Ââåäèòå ýëåìåíò äëÿ óäàëåíèÿ: " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: " << endl;
 
                 value = GetIntegerInput();
 
                 treap->RemoveUnoptimized(value);
 
-                std::cout << "Ýëåìåíò óäàë¸í!" << endl;
+                std::cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»Ñ‘Ð½!" << endl;
                 break;
             }
             case 5:
             {
-                std::cout << "Ââåäèòå ýëåìåíò äëÿ ïîèñêà: " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ°: " << endl;
 
                 value = GetIntegerInput();
 
@@ -292,18 +292,18 @@ void ShowTreapMenu()
 
                 if (treapNode != nullptr)
                 {
-                    std::cout << "Ýëåìåíò íàéäåí!" << endl;
+                    std::cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ Ð½Ð°Ð¹Ð´ÐµÐ½!" << endl;
                 }
                 else
                 {
-                    std::cout << "Äàííîãî ýëåìåíòà íåò â äåðåâå. " << endl;
+                    std::cout << "Ð”Ð°Ð½Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½ÐµÑ‚ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ. " << endl;
                 }
 
                 break;
             }
             case 6:
             {
-                std::cout << "Äåêàðòîâî äåðåâî: " << endl;
+                std::cout << "Ð”ÐµÐºÐ°Ñ€Ñ‚Ð¾Ð²Ð¾ Ð´ÐµÑ€ÐµÐ²Ð¾: " << endl;
                 PrintTreap(treap->GetRoot());
                 break;
             }
@@ -313,7 +313,7 @@ void ShowTreapMenu()
             }
             default:
             {
-                std::cout << "Ââåäèòå êîððåêòíîå çíà÷åíèå! " << endl;
+                std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! " << endl;
                 break;
             }
         }

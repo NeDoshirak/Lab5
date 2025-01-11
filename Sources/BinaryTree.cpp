@@ -1,4 +1,4 @@
-#include "BinaryTree.h"
+#include "../Header/BinaryTree.h"
 
 BinaryTree::BinaryTree()
 {
@@ -65,7 +65,7 @@ BinaryTreeNode* BinaryTree::RemoveNode(BinaryTreeNode* node, int value)
 
 int BinaryTree::FindMin()
 {
-    if (!_root) throw std::runtime_error("Äåðåâî ïóñòî.");
+    if (!_root) throw std::runtime_error("Ð”ÐµÑ€ÐµÐ²Ð¾ Ð¿ÑƒÑÑ‚Ð¾.");
     return FindMinNode(_root)->Value;
 }
 
@@ -115,7 +115,7 @@ BinaryTreeNode* BinaryTree::FindMaxNode(BinaryTreeNode* node)
 
 int BinaryTree::FindMax()
 {
-    if (!_root) throw std::runtime_error("Äåðåâî ïóñòî.");
+    if (!_root) throw std::runtime_error("Ð”ÐµÑ€ÐµÐ²Ð¾ Ð¿ÑƒÑÑ‚Ð¾.");
     return FindMaxNode(_root)->Value;
 }
 
